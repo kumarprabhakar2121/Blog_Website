@@ -1,0 +1,14 @@
+<%- include("partials/header") -%>
+<h1><%= postTitle %></h1>
+<p><%= postBody %></p>
+<form action="/update" method="post">
+    <input type="hidden" name="postTitle" value="<%=postTitle%>" >
+    <input type="hidden" name="postBody" value="<%=postBody%>" >
+  <button type="submit" class="btn btn-primary ">Update</button>
+</form>
+<form action="/delete" method="post">
+    <input type="hidden" name="postTitle" value="<%=postTitle%>" >
+  <button type="submit" class="btn btn-danger ">Delete</button>
+</form>
+
+<%- include("partials/footer") -%>

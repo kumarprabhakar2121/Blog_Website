@@ -1,0 +1,18 @@
+<%- include("partials/header"); -%>
+<div class="container composeForm">
+<h1>Update Journal </h1>
+    <br>
+    <form action="/updateJournal" method="post">
+        <label><h3></h3></label>
+        <p class="postFields">
+        <input type="text" name="newPostTitle" value="<%=postTitle%>" style="width: 100%; height: 40px" id="" required autofocus></p>
+        <br>
+        <label for="postBody"><h3>Post</h3></label><br><p class="postFields">
+        <textarea id="postBody" name="newPostBody" value="<%=postBody%>"  rows="6" style="width:100%" required></textarea></p>
+        <input type="hidden" name="postTitle" value="<%=postTitle%>" >
+        <br><button class="btn btn-lg btn-default btn-success" type="submit">Publish</button>
+    </form>
+</div>
+
+
+<%- include("partials/footer"); -%>
